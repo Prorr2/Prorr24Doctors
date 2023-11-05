@@ -1,0 +1,19 @@
+<div class="bg-accent p-10 flex flex-row w-full justify-end">
+  <h1 class="text-center text-4xl text-accent-content">
+    Welcome to <strong>Do</strong>c<strong>t</strong>ors csv page
+  </h1>
+  <div class="w-2/6 flex flex-row justify-end">
+    <form class="flex flex-row gap-3 self-end" method="POST">
+      {% csrf_token %} {{form}}
+      <p>Dark Mode</p>
+    </form>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const checkbox = document.querySelector("#checkbox");
+    checkbox.addEventListener("change", function () {
+      this.form.submit();
+    });
+  });
+</script>

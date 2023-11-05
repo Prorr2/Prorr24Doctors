@@ -1,0 +1,11 @@
+{%extends 'base.html'%} {%block content%}
+<header>{%include 'web/navbar.html'%}</header>
+<main class="w-full h-full bg-base-100 flex flex-row">
+  <section class="w-3/6 flex flex-col items-center">
+    {%include 'web/body/leftSide.html'%}
+  </section>
+  <section class="w-3/6 flex flex-col p-10">
+    {%include 'web/body/rightSide.html'%}
+  </section>
+</main>
+{%endblock content%}

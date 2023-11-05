@@ -1,0 +1,19 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+{% if dark%}
+<html lang="en" data-theme="darktheme">
+  {%else%}
+  <html lang="en" data-theme="lightheme">
+    {%endif%}
+    <head>
+      <title>Django Tailwind</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      {% tailwind_css %}
+    </head>
+    <body class="h-screen w-screen">
+      {% block content%}{%endblock content%}
+    </body>
+  </html>
+</html>
